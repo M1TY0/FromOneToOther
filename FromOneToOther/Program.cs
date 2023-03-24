@@ -78,7 +78,7 @@ void InsertWordsFromServerDb(string word, string prevod, int id)
     conn.Open();
     string query1 = $"insert into word values('{word}','{prevod}',0,{id});";
     MySqlCommand cmd1 = new MySqlCommand(query1, conn);
-    cmd1.ExecuteScalar().ToString();
+    cmd1.ExecuteScalar();
     conn.Close();
 
 }
